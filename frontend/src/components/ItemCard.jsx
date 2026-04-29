@@ -9,13 +9,21 @@ function ItemCard({ item, onDelete }) {
         className="card-image"
       />
       <h3>{item.name}</h3>
-      <p><strong>Category:</strong> {item.category}</p>
-      <p><strong>Price:</strong> ${item.price}</p>
-      <p><strong>Discount:</strong> {item.discountPercentage ?? 0}%</p>
+      <p>
+        <strong>Category:</strong> {item.category}
+      </p>
+      <p>
+        <strong>Price:</strong> ${item.price}
+      </p>
+      <p>
+        <strong>Discount:</strong> {item.discountPercentage ?? 0}%
+      </p>
       <p>{item.description}</p>
 
       <div className="card-actions">
-        <Link className="btn secondary" to={`/edit-item/${item._id}`}>Edit</Link>
+        <Link className="btn secondary" to={`/edit-item/${item._id}`}>
+          Edit
+        </Link>
         <button className="btn danger" onClick={() => onDelete(item._id)}>
           Delete
         </button>

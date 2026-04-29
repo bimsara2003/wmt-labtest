@@ -9,7 +9,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       description: "",
       imageUrl: "",
       discountPercentage: "",
-    }
+    },
   );
 
   const handleChange = (e) => {
@@ -31,10 +31,20 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       <h2>{submitText}</h2>
 
       <label>Item Name</label>
-      <input name="name" value={formData.name} onChange={handleChange} required />
+      <input
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
 
       <label>Category</label>
-      <input name="category" value={formData.category} onChange={handleChange} required />
+      <input
+        name="category"
+        value={formData.category}
+        onChange={handleChange}
+        required
+      />
 
       <label>Price</label>
       <input
@@ -55,7 +65,11 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       />
 
       <label>Image URL</label>
-      <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
+      <input
+        name="imageUrl"
+        value={formData.imageUrl}
+        onChange={handleChange}
+      />
 
       <label>Discount Percentage (%)</label>
       <input
@@ -67,7 +81,9 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         max="100"
       />
 
-      <button className="btn primary" type="submit">{submitText}</button>
+      <button className="btn primary" type="submit">
+        {submitText}
+      </button>
     </form>
   );
 }
